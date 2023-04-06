@@ -1,2 +1,2 @@
-# A guide for beginners
+# About the book
 
