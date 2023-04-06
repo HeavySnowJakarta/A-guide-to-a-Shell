@@ -1,2 +1,2 @@
-# Page 1
+# A guide for beginners
 
