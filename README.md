@@ -4,7 +4,11 @@
 
 This document is a tutorial for new comers to know how to do various things on this app, from editing text files to compile big projects.
 
-Anyone willing is encouraged to contribute to this document. Just click “Edit on GitHub”, fork the repository and start your editing then.
+The tutorial is still in progress. Anyone willing is encouraged to contribute to this document. See [contribute-to-the-book.md](contribute-to-the-book.md "mention")for details.
+
+This work is published under CC BY-SA 4.0 license. I can‘t be happier if the official repo can accept this document as the official document.
+
+If you know little about `a-Shell`, you can start from reading [README (1).md](<README (1).md> "mention").
 
 ### Content
 
