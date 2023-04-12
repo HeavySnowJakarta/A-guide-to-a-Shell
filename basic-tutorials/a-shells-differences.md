@@ -50,4 +50,16 @@ Limitations mainly come from two aspects: those from Apple and those from the FS
 
 #### Limitations from Apple
 
-Due to Apple’s limitation, only those dictionaries can be accessed by a-Shell: `~/Documents/`, `~/Library` and `~/tmp`, which has made a-Shell’s file structure uncommon. All user configuration files are stored at `~/Documents/` instead of `~`, and `$HOME` has been set to `~/Documents/` as well.&#x20;
+Due to Apple’s limitation, only those dictionaries can be accessed by a-Shell: `~/Documents/`, `~/Library` and `~/tmp`, which has made a-Shell’s file structure uncommon. All user configuration files are stored at `~/Documents/` instead of `~`, and `$HOME` has been set to `~/Documents/` as well. The file structure has made building works, especially cross-compiling more complex, so it should be treated carefully.
+
+Executable files are either native codes for iOS/iPadOS, or WebAssembly files. Due to Apple’s limitation, all native codes must be shipped with the App itself when releasing. To add a new command with native codes, you have to resign the developer certificate and release the whole app to App Store, and all users would receive the update then.
+
+For native codes, many functions are unavailable on `arm64` for iOS, such as `fork()`, `exec()`, `system()`, etc. a-Shell emulates `fork()` and `exec()` for POSIX programs, which is not perfect but enough. WebAssembly is very limited as well, so that few commands can be compiled to WebAssembly.
+
+`sudo` is also unavailable because of Apple’s limitations, so programs requring for a super-user privilege like `traceroute` does not work.
+
+For jailbroken device users, it may be differences on a-Shell. For example, the entire file system would be able to read/write, which may cause problems. Do not hesitate to open an issue if you meet any of those!
+
+#### Limitations from the FSF (Free Software Foundation)
+
+There are actually many restrictions to use programs under GPL license. It may be not allowed to include GPL codes in the App Store distributions. You may have to ask for all contributors‘ permission, which may be very hard. Thus, it‘s suggested not including any GPL codes in a-Shell and try to find alternatives under BSD or other licenses. `bash`, `emacs`, `nano` and many other excellent programs can’t be included.
