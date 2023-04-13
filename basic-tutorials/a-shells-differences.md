@@ -62,4 +62,24 @@ For jailbroken device users, it may be differences on a-Shell. For example, the 
 
 #### Limitations from the FSF (Free Software Foundation)
 
-There are actually many restrictions to use programs under GPL license. It may be not allowed to include GPL codes in the App Store distributions. You may have to ask for all contributors‘ permission, which may be very hard. Thus, it‘s suggested not including any GPL codes in a-Shell and try to find alternatives under BSD or other licenses. `bash`, `emacs`, `nano` and many other excellent programs can’t be included.
+There are actually many restrictions to use programs under GPL license. It may be not allowed to include GPL codes in the App Store distributions. You may have to ask for all contributors‘ permission, which may be very hard. Thus, it‘s suggested not including any GPL codes in a-Shell and try to find alternatives under BSD or other licenses. `bash`, `emacs`, `nano` and many other excellent programs can’t be included for this reason.
+
+### Comparisons with alternatives
+
+Here are comparisons between a-Shell and some alternatives. You may find which one suits you better here.
+
+#### iSH
+
+iSH is a Linux emulator for iOS/iPadOS, which uses syscall to translate Linux x86 commands. Of course, it’s interesting to use Alpine with an iOS device without jailbreaking.
+
+With an emulating layer, iSH can do more things than a-Shell. You can run normal bash scripts, compile and run native binary codes or use `apk` to install a great number of packages. But attention iSH can’t to anyting you like. `node.js` and some important tools can’t be supported. What’s more, iSH works greatly slower than a-Shell. It’s not very happy to wait 10 seconds for a simple Python script or a minute to clone a git repository, right?
+
+#### Blink Shell
+
+Blink is a remote device connecting tool for iOS/iPadOS, which now provides the best terminal experience on an iOS device. Blink Shell’s command function is based on `ios_system`, the same with a-Shell, so it’s listed here.
+
+Blink Shell has an awesome appearance, an easy-to-use configure menu and a strong remote working ability, so it’s a recommended SSH/Mosh client for iOS/iPadOS. But Blink Shell itself is much weaker than a-Shell, where only basic UNIX commands are supported. You can’t even clone from a repository with it!
+
+Blink Code is another welcomed function of Blink. Imagine coding with VSCode on an iPad everywhere! But attention it’s based on `vscode.dev`. Actually there is not a way to run a native VSCode on iPad yet.
+
+Blink is not completely free of charge as well. Users of free plan will receive a “it’s time to become a pro” screen every day. They are forced to “rest“ for a while and have to pay for the advanced plan to remove it.
