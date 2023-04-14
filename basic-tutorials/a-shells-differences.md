@@ -83,3 +83,17 @@ Blink Shell has an awesome appearance, an easy-to-use configure menu and a stron
 Blink Code is another welcomed function of Blink. Imagine coding with VSCode on an iPad everywhere! But attention it’s based on `vscode.dev`. Actually there is not a way to run a native VSCode on iPad yet.
 
 Blink is not completely free of charge as well. Users of free plan will receive a “it’s time to become a pro” screen every day. They are forced to “rest“ for a while and have to pay for the advanced plan to remove it.
+
+#### NewTerm
+
+NewTerm is a terminal app for Apple devices. For iPhone or iPads, jailbreaking is required. It’s a real terminal emulator which can control the Apple Device completely, which is welcomed by jailbroken users. Of course, things it can do are much more than what a-Shell can do.
+
+Besides functions, it has a tab-based interface and good font support. However, there are still some jailbroken users prefer a-Shell for its shortcuts or other features.
+
+#### Termux
+
+Termux is a terminal emulator for Android devices, supporting Linux environments for them. It uses `pkg` to manage packages.
+
+Based on the Linux sub system, Termux has a strong ability to run a lot of programs, no matter `bash`, `zsh` or `fish`. What’s more, a number of developing tools are built-in, allowing users to build or debug. It can also use the API of Android, like reading the SMS box.
+
+It’s even amazing to provide `proot` to allow users to install a complete Linux system here, and then almost everything can be done. On the contrary, the number of what an iOS device can do is much smaller.
