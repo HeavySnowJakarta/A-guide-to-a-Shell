@@ -180,7 +180,7 @@ $ jsc test.js
 Hello, world!
 ```
 
-So far there is no research on `node.js` yet. Projects of JavaScript that don’t rely on `node.js` should work. On the chapter _Let’s do more for it_ this problem will be talked.
+So far there is no research on `node.js` yet. Projects of JavaScript that don’t rely on `node.js` should work. On the chapter _Let’s do more for it_ this problem will be talked about.
 
 #### C/C++ and WebAssembly
 
