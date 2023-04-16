@@ -72,7 +72,7 @@ Here are comparisons between a-Shell and some alternatives. You may find which o
 
 iSH is a Linux emulator for iOS/iPadOS, which uses syscall to translate Linux x86 commands. Of course, it’s interesting to use Alpine with an iOS device without jailbreaking.
 
-With an emulating layer, iSH can do more things than a-Shell. You can run normal bash scripts, compile and run native binary codes or use `apk` to install a great number of packages. But attention iSH can’t to anyting you like. `node.js` and some important tools can’t be supported. What’s more, iSH works greatly slower than a-Shell. It’s not very happy to wait 10 seconds for a simple Python script or a minute to clone a git repository, right?
+With an emulating layer, iSH can do more things than a-Shell. You can run normal bash scripts, compile and run native binary codes or use `apk` to install a great number of packages. But attention iSH can’t to anyting you like. `node.js` and some important tools can’t be supported. What’s more, iSH works greatly slowlier and more unstable than a-Shell. It’s not very happy to wait 10 seconds for a simple Python script or a minute to clone a git repository, right?
 
 #### Blink Shell
 
