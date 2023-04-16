@@ -11,9 +11,9 @@
 * [Configure the Shell](basic-tutorials/configure-the-shell.md)
 * [Configure lg2 for version controlling](basic-tutorials/configure-lg2-for-version-controlling.md)
 * [Configure your Vim](basic-tutorials/configure-your-vim.md)
-* [Run JupyterLab](basic-tutorials/run-jupyterlab.md)
+* [Run Jupyter](basic-tutorials/run-jupyter.md)
 
 ## Let’s do more for it
 
-* [Compile a simple command](lets-do-more-for-it/compile-a-simple-command.md)
+* [Compile a simple command with a-Shell](lets-do-more-for-it/compile-a-simple-command-with-a-shell.md)
 * [Add new packages](lets-do-more-for-it/add-new-packages.md)

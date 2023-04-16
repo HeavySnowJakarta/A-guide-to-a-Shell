@@ -24,17 +24,15 @@ color][-c cursor color][-dgprt]
 
 First you have to prepare your own console font manually. It’s recommended to use a nerd font from [https://www.nerdfonts.com](https://www.nerdfonts.com), which includes various icons. Download a font file to your device, then use an App like iFonts to have it installed.
 
-Then you need to know your font’s exact name on your device. You may use another App that can see installed fonts, like iSH or Word. For example, here is a list of installed mono fonts on iSH.
-
-<figure><img src="../.gitbook/assets/AEF4C713-9E75-4A1A-AE56-4E3DB40FD56B.jpeg" alt=""><figcaption><p>A mono fonts list</p></figcaption></figure>
-
 In this example, we’ll use `UbuntuMono Nerd Font Mono`. Go back to a-Shell and just run:
 
 ```
 $ config -n ‘UbuntuMono Nerd Font Mono’
 ```
 
-Then it should works.
+If you don’t know the name of your font, use `config -n` to open a font menu and choose one then.
+
+<figure><img src="../.gitbook/assets/4D2C7F31-8B19-4CEC-B5D1-B0940275F88C.jpeg" alt=""><figcaption><p>The font menu</p></figcaption></figure>
 
 ### Color
 

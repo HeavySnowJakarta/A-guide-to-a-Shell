@@ -1,2 +1,0 @@
-# Compile a simple command
-
