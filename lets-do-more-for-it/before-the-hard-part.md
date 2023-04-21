@@ -15,6 +15,8 @@ Consider do you want to compile your codes to native codes or WebAssembly codes,
 
 ### What would be talked about at this chapter?
 
+This part is on progress and not finally determined.
+
 * To compile a project in C/C++ to WebAssembly files with a-Shell’s own tool chain
 * To cross-compile a project with a real computer environment’s tool chain to WebAssembly files
 * To submit new packages to a-Shell’s extension repository
