@@ -97,4 +97,31 @@ Now we’ll revise the makefile to let it suit our tool chain. Before that, we n
 * `-O2` means O2 optimization, working with `clang++`.
 * `-Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else` will be not needed.
 * `-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP` is for 32-bit systems to deal with large files. For a 64-bit system, it‘s useless but harmless.
-* `/usr` won’t be accessible on a-Shell. Actually `~/Library` acts as `/usr` so we’ll use it instead.
+* `/usr` won’t be accessible on a-Shell. Actually `~/Library` acts as `/usr` so it‘ll be used instead.
+* `-fPIC` is means Position Independent Code for dynamic link libraries, working with `clang++`.
+* `-pthread` means multiple threads, and is not provided by WebAssembly yet, so it doesn’t work with a-Shell.
+
+Then the makefile can be revised to:
+
+```makefile
+# a-Shell using clang++
+CXX=clang++
+CXXFLAGS=-O2
+LIBFLAGS=-fPIC
+DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
+STRIP=strip
+AR=ar
+LDFLAGS=
+DESTDIR=~/Library
+...
+```
+
+Now let’s try to compile it:
+
+```bash
+$ make
+```
+
+{% hint style="info" %}
+Actually this project does not work due to lack of APIs provided by WASI. We are looking for a project that the source code does work with a-Shell. If you know one, please let us know.
+{% endhint %}
