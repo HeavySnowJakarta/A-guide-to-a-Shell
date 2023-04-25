@@ -123,5 +123,5 @@ $ make
 ```
 
 {% hint style="info" %}
-Actually this project does not work due to lack of APIs provided by WASI. We are looking for a project that the source code does work with a-Shell. If you know one, please let us know.
+Actually this project does not work due to lack of APIs provided by WASI. We are looking for a project that the source code does work with a-Shell’s own tool chain. If you know one, please let us know.
 {% endhint %}
