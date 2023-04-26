@@ -6,7 +6,7 @@
 
 ```
 usage: config [-s font size][-n font name][-b background color][-f foreground 
-color][-c cursor color][-dgprt]
+color][-c cursor color][-k shape][-dgprth]
 ```
 
 * `-s font size`: change the size of the text
@@ -14,11 +14,16 @@ color][-c cursor color][-dgprt]
 * `-b background color`: change the background color
 * `-f foreground color`: change the text color
 * `-c cursor color`: change the color of the cursor
+* `-k shape`: change the shape of the cursor, where `shape` can be beam, block or underline
+
+For commands above, `default` can be used to return to the status stored before, and `factory` can be used to go back to the factory status.
+
 * `-d`: do not save the changes and go back to the precious status
 * `-g`: apply the change to all the open windows
 * `-p`: save the change to apply it permanently
 * `-r`: go back to the initial status: white background and black text
 * `-t`: generate a toolbar configuration file
+* `-h`: print the help text
 
 ### Font
 

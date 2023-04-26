@@ -14,7 +14,11 @@ As `dash` is POSIX-compatible, standard shell scripts are able to be executed. B
 
 ### .profile and .bashrc
 
-`~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window start, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc.&#x20;
+`~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window start, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc. For example, add a alias to your `.profile`:
+
+```bash
+alias md=‘mkdir’
+```
 
 ### Define the prompt
 
@@ -27,4 +31,33 @@ $ export PS1=‘>’
 >
 ```
 
-Sometimes we want to know the current path or other useful information via the prompt. Here are&#x20;
+Sometimes we want to know the current path or other useful information via the prompt. Here are some parameters you can use:
+
+* `\d`: the current date
+* `\u`: the username stored at `$USERNAME`, `mobile` by default
+* `\s`: the shell’s name
+* `\n`: the end of a line, used to start a new line
+* `\t`: the current time, going by hh:mm:ss and 24-hour format
+* `\T`: the current time, going by hh:mm:ss and 12-hour format
+* `\@`: the current time, going by hh:mm and 12-hour format
+* `\A`: the current time, going by hh:mm and 24-hour format
+* `\v`: the current version of a-Shell
+* `\V`: the current version and build number of a-Shell
+* `\w`: the current complete path
+* `\W`: the current working dictionary, not the complete path
+* `\!` and `\#`: the number of the command, not working correctly now
+* `\$`: judge if the account is `root`, `#` if yes while `$` if no (it won’t be yes even if you‘ve jailbroken)
+* `\\`: a backslash
+* `\[` and `\]`: start or stop a place of non-printed characters, which is used to define controlling characters like changing the color
+
+You can use ANSI controlling characters to define colors or other styles. Here is an example:
+
+```
+$ export PS1=‘\[\033[034m\]\w\[\033[0m\]\$’
+```
+
+Now guess how to get a rainbow-style prompt like this. Nerd fonts will be needed for arrays.
+
+<figure><img src="../.gitbook/assets/34977EE6-3A93-4E5E-A2F4-108E57599302.jpeg" alt=""><figcaption><p>A rainblw-style prompt</p></figcaption></figure>
+
+Attention this feature only works for a-Shell’s default shell (the one when a-Shell starts) but not for `dash`. When you run `dash`, you can only get a series of strange codes.
