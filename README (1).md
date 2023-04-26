@@ -172,7 +172,7 @@ Hello, world!
 
 #### JavaScript
 
-`JavaScriptCore` of WebKit is included. You can use `jsc` to run normal JavaScript codes.
+The JS environment of WebKit is included. You can use `jsc` to run normal JavaScript codes.
 
 ```sh
 $ echo 'console.log("Hello, world!");' > test.js
@@ -180,7 +180,7 @@ $ jsc test.js
 Hello, world!
 ```
 
-So far there is no research on `node.js` yet. Projects of JavaScript that don’t rely on `node.js` should work. On the chapter _Let’s do more for it_ this problem will be talked about.
+It will be a hard thing to have `node.js` included. Possibilities exist to make them run with `jsc` but so far nobody has tried. On the chapter _Let’s do more for it_ this problem will be talked about.
 
 #### C/C++ and WebAssembly
 

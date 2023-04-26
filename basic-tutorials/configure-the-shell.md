@@ -61,3 +61,5 @@ Now guess how to get a rainbow-style prompt like this. Nerd fonts will be needed
 <figure><img src="../.gitbook/assets/34977EE6-3A93-4E5E-A2F4-108E57599302.jpeg" alt=""><figcaption><p>A rainblw-style prompt</p></figcaption></figure>
 
 Attention this feature only works for a-Shell’s default shell (the one when a-Shell starts) but not for `dash`. When you run `dash`, you can only get a series of strange codes.
+
+You may want to add a command to the variable like `` `pwd` ``. However, it doesn’t work with a-Shell, so you can’t see `git status` on the prompt.
