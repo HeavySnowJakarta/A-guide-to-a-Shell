@@ -11,7 +11,7 @@ For Vim 8 of a-Shell, packages can be stored at `~/Documents/.vim/pack/*/start` 
 ```bash
 # It’s supposed you’ve already created the dictionary.
 $ cd ~/Documents/.vim/pack/mypackages/start/nerdtree
-$ lg2 clone https://github.com/preservim/nerdtree.git .
+$ lg2 clone https://github.com/preservim/nerdtree.git
 ```
 
 When you want to update the package, you just need to run `lg2 pull` at its dictionary, and when you want to remove it, just delete it’s dictionary completely would be okay.

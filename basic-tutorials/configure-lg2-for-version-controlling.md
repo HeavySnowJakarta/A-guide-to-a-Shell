@@ -4,7 +4,7 @@ A number of users have been seeking for an available version controlling tool fo
 
 ### Git command?
 
-Some new users have already found there is a `git` package on the repository. However, it will just add a link to `lg2` so that you can use `git` command directly. It would be useful but be careful that there are differences between `git` and `lg2`. Due to FSF’s policy, the original `git` can not be included, but `lg2` is enough for most cases. Attention many tools to manage Git directories won’t work because of the differences even when you have `git` package installed.
+Some new users have already found there is a `git` package on the repository. However, it will just add a link to `lg2` so that you can use `git` command directly. It may be useful but be careful that there are differences between `git` and `lg2`. Due to FSF’s policy, the original `git` can not be included, but `lg2` is enough for most cases. Attention many tools to manage Git directories won’t work because of the differences even when you have `git` package installed.
 
 Now let’s try to install the `git` command.
 
