@@ -4,7 +4,7 @@ Anyone is encouraged to add anything you want to this guide. Want to tell others
 
 Attention that this guide is under CC BY-SA 4.0 license. That’s to say, all of your contributions wil be released under that license.
 
-### Edit articles already exist
+### Edit articles that already exist
 
 The guide is stored at a GitHub repository: [https://github.com/HeavySnowJakarta/A-guide-to-a-Shell](https://github.com/HeavySnowJakarta/A-guide-to-a-Shell). When you want to edit the article you are reading, click the three dots of the top right-hand corner of the page, and choose “Edit on GitHub”, you will be led to the GitHub page of the article.
 

@@ -47,10 +47,14 @@ Now we are clarified: an install script is needed for `pkg install` to execute w
 
 ### An example
 
+{% hint style="info" %}
+This part is still on progress.
+{% endhint %}
+
 `cowsay` is an old and famous project written in Perl. To have it installed, we may clone the GitHub mirror repository first:
 
 ```
 $ lg2 clone https://github.com/schacon/cowsay
 ```
 
-We can see there is an `install.sh` on the repository. Actually it does not work with a-Shell and `dash` and it’s not essential.
+We can see there is an `install.sh` on the repository. Actually it does not work with a-Shell and `dash` while it’s not essential. We’ll rewrite a script of installing for it.

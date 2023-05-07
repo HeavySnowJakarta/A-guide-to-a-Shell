@@ -1,6 +1,6 @@
 # A guide for beginners
 
-You may already found `a-Shell` on the App Store. `a-Shell` is a terminal emulator for iOS/iPadOS, which allows you to run various Unix commands, from importing `python.rich` module to managing `vim` plugins. You can use `ffmpeg`, `python`, `lua`, `tex`, `perl`, `clang`, `wasm`, `jsc`, etc, and edit text using `vim` or nano-like `pico`. You can even run `JupyterLab`, and `code-server` may be researched in the future.
+You may already found `a-Shell` on the App Store. `a-Shell` is a terminal emulator for iOS/iPadOS, which allows you to run various Unix commands, from importing the `python.rich` module to managing `vim` plugins. You can use `ffmpeg`, `python`, `lua`, `tex`, `perl`, `clang`, `wasm`, `jsc`, etc, and edit text using `vim` or nano-like `pico`. You can even run `JupyterLab`, and `code-server` may be researched in the future.
 
 ### What you can do
 

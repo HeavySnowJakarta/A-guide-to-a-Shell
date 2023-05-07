@@ -18,11 +18,11 @@ Consider do you want to compile your codes to native codes or WebAssembly codes,
 This part is on progress and not finally determined.
 
 * To compile a project in C/C++ to WebAssembly files with a-Shell’s own tool chain
-* To cross-compile a project with a real computer environment’s tool chain to WebAssembly files
+* To cross-compile a project with a real computer environment’s tool chain to WebAssembly files, with `make`, `cmake` or other tools
 * To submit new packages to a-Shell’s extension repository
 * To add new commands to a-Shell itself and compile the project
 * Go and WebAssembly
 * The possibilities of Rust
-* Node.js? JavaScriptCore?
+* Node.js? JSCompiler?
 * Some interesting ideas
 
