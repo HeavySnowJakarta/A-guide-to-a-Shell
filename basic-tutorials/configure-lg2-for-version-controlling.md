@@ -62,7 +62,7 @@ You can clone any repositories naturally:
 $ lg2 clone https://github.com/holzschu/a-shell.git
 ```
 
-Then you’ll see `a-shell.git` on the current dictionary. On the contrary, for a normal computer with standard `git` command, the dictionary would be named `a-shell`. Actually, all basic commands works well including `lg2 push origin`, but there are still some won’t work, like drawing the commit graph. Enjoy your version controlling trip!
+Then you’ll see `a-shell.git` on the current dictionary. On the contrary, for a normal computer with standard `git` command, the dictionary would be named `a-shell`. You can remove the `.git` of the url to let it look less outstanding. Actually, all basic commands works well including `lg2 push origin`, but there are still some won’t work, like drawing the commit graph. Enjoy your version controlling trip!
 
 ### Does a-Shell support Subversion, CVS or other alternatives?
 
