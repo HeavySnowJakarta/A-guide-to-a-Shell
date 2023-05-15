@@ -49,6 +49,10 @@ ovide shell access.
 
 That’s good. Now we‘ll configure the user name and the email.
 
+{% hint style="warning" %}
+There are problems with this part!
+{% endhint %}
+
 ```
 $ lg2 config —-global user.name “<your name>”
 $ lg2 config —-global user.email “<your email>”

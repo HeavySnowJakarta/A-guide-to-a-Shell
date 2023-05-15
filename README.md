@@ -10,7 +10,7 @@ This work is published under CC BY-SA 4.0 license. Feel free to share it around.
 
 If you know little about `a-Shell`, you can start from reading [README (1).md](<README (1).md> "mention").
 
-{% hint style="info" %}
+{% hint style="danger" %}
 The command line code blocks of this guide is NOT designed to copy and run in the terminal directly. Be cautious before you run any commands showed in this guide or you may meet errors. Input them manually instead.&#x20;
 {% endhint %}
 
