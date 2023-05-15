@@ -18,3 +18,7 @@
 * [Before the hard part](lets-do-more-for-it/before-the-hard-part.md)
 * [Compile a simple command with a-Shell](lets-do-more-for-it/compile-a-simple-command-with-a-shell.md)
 * [Submit new packages](lets-do-more-for-it/submit-new-packages.md)
+
+***
+
+* [Ended?](ended.md)

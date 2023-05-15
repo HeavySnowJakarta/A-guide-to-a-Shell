@@ -4,7 +4,7 @@
 
 This document is a tutorial for new comers to know how to do various things on this app, from editing text files to compile big projects.
 
-The tutorial is still in progress. Anyone willing is encouraged to contribute to this document. See [contribute-to-the-book.md](contribute-to-the-book.md "mention")for details.
+The tutorial is still in progress. Anyone willing is encouraged to contribute to this document. See [contribute-to-the-book.md](contribute-to-the-book.md "mention") for details.
 
 This work is published under CC BY-SA 4.0 license. Feel free to share it around.
 
