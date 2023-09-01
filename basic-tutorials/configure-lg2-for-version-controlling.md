@@ -58,6 +58,28 @@ $ lg2 config —-global user.name “<your name>”
 $ lg2 config —-global user.email “<your email>”
 ```
 
+To avoid being prompted for the key to use and your password each time, you can add
+
+```
+$ lg2 config —-global user.identityFile "~/Documents/.ssh/<private key filename>”
+$ lg2 config —-global user.password “<your password>”
+```
+
+If these commands don't work, you can manually create a global configuration file:
+
+```
+vim ~/Documents/.gitconfig
+```
+
+Then put
+
+```
+[user]
+       name = <your name>
+       email = <your email>
+```
+in the body of the file. For more information on the configuration possibilities and required syntax, see the [Git Book](https://git-scm.com/docs/git-config#_configuration_file). If you put sensitive information in the file, such as SSH key passphrases, you should set file permissions appropriately to limit risks, using `chmod`.
+
 ### Cloning and other operations
 
 You can clone any repositories naturally:
