@@ -1,6 +1,6 @@
 # Contribute to the book
 
-Everyone is encouraged to add anything they want to this guide. Want to tell others how to compile a project written in Java? Want to provide a solution for a commonly seen issue? Or just want to let the document earlier to finish? This article will guide you to make contributions to this document.
+Everyone is encouraged to add anything he want to this guide. Want to tell others how to compile a project written in Java? Want to provide a solution for a commonly seen issue? Or just want to let the document earlier to finish? This article will guide you to make contributions to this document.
 
 Attention that this guide is under CC BY-SA 4.0 license. That’s to say, all of your contributions will be released under that license.
 
