@@ -1,6 +1,6 @@
 # A guide for beginners
 
-You may already found `a-Shell` on the App Store. `a-Shell` is a terminal emulator for iOS/iPadOS, which allows you to run various Unix commands, from importing the `python.rich` module to managing `vim` plugins. You can use `ffmpeg`, `python`, `lua`, `tex`, `perl`, `clang`, `wasm`, `jsc`, etc, and edit text using `vim` or nano-like `pico`. You can even run `JupyterLab`, and `code-server` may be researched in the future.
+You may have already found `a-Shell` on the App Store. `a-Shell` is a terminal emulator for iOS/iPadOS, which allows you to run various Unix commands, from importing the `python.rich` module to managing `vim` plugins. You can use `ffmpeg`, `python`, `lua`, `tex`, `perl`, `clang`, `wasm`, `jsc`, etc, and edit text using `vim` or nano-like `pico`. You can even run `JupyterLab`; also, `code-server` may be researched in the future.
 
 ### What you can do
 
@@ -67,7 +67,7 @@ If you are not used to Vim and looking for a simpler text editor, `pico` will su
 
 <figure><img src=".gitbook/assets/D884DB64-276A-46D6-8ED6-789FBD167C1C.jpeg" alt=""><figcaption><p>Pico interface</p></figcaption></figure>
 
-A toy `ed` is also included. `ed` is a line editor, which allows to input editing commands line by line. For the example below, `r`, `,p`, `1`, `2`, `3`, `4` and `q` are commands inside, and others are the outputs by `ed`.
+A toy, `ed`, is also included. `ed` is a line editor, which allows one to input editing commands line by line. For the example below, `r`, `,p`, `1`, `2`, `3`, `4` and `q` are commands inside, and others are the outputs by `ed`.
 
 ```
 $ ed
@@ -154,7 +154,7 @@ lenium-4.8.3 sortedcontainers-2.4.0 trio-0.22.0 trio-websocket-0.10.2 wsproto-1.
 
 #### Lua and Perl
 
-Other script languages like Lua does work.
+Other script languages like Lua do work.
 
 ```sh
 $ lua
@@ -163,7 +163,7 @@ Lua 5.4.4  Copyright (C) 1994-2022 Lua.org, PUC-Rio
 Hello, world!
 ```
 
-And so does Perl.
+Perl also works.
 
 ```
 $ perl test.pl
