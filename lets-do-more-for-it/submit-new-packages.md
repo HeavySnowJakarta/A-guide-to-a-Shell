@@ -25,7 +25,7 @@ mandocdb ~/Library/man
 curl -L https://raw.githubusercontent.com/holzschu/a-Shell-commands/master/uninstall/$packagename -o ~/Documents/.pkg/$packagename --create-dirs --silent
 ```
 
-The install script downloads the binary file (scripts sometimes) to `~/Documents/bin/` or `~/Library/bin/` that is stored at `$PATH`, then gets the man page and refresh the man database,and downloads the uninstall script finally. The binary file(s) can be stored at a repository (anywhere in fact) and for a single command it can be parsed with `curl`. Here’s it’s uninstall script:
+The install script downloads the binary file (scripts sometimes) to `~/Documents/bin/` or `~/Library/bin/` that is stored at `$PATH`, then gets the man page, refreshes the man database,and finally downloads the uninstall script. The binary file(s) can be stored at a repository (anywhere in fact) and for a single command it can be parsed with `curl`. Here’s it’s uninstall script:
 
 ```bash
 #! /bin/sh
@@ -41,9 +41,9 @@ rm ~/Library/man/man1/$packagename.1
 mandocdb ~/Library/man
 ```
 
-The uninstall script just clears everything about the package: the binary file, and the man page. For a comlexer project, remember to remove any app data by your package.
+The uninstall script just clears everything about the package: the binary file, and the man page. For a more comlex project, remember to remove any app data by your package.
 
-Now we are clarified: an install script is needed for `pkg install` to execute while an uninstall script is as well but for `pkg uninstall`. Usually the man page is also needed although it can be not included sometimes. The install script is stored at the repository and it indicates where the other parts of the package are stored at.
+Now we have clarified: an install script is needed for `pkg install` to execute while an uninstall script is needed as well, except it is for `pkg uninstall`. Usually the man page is also needed although it isn't required because it isn't always necissary. The install script is stored at the repository and it indicates where the other parts of the package are stored at.
 
 ### An example
 
@@ -57,4 +57,4 @@ This part is still on progress.
 $ lg2 clone https://github.com/schacon/cowsay
 ```
 
-We can see there is an `install.sh` on the repository. Actually it does not work with a-Shell and `dash` while it’s not essential. We’ll rewrite a script of installing for it.
+We can see there is an `install.sh` on the repository. Actually it does not work with a-Shell and `dash` while it’s not essential. We’ll rewrite the installation script for it.
