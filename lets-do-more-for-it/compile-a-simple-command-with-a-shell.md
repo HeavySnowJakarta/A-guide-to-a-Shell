@@ -1,6 +1,6 @@
 # Compile a simple command with a-Shell
 
-This article focus on compiling a small file or project written in C/C++ with a-Shell’s own tool chain. Due to Apple’s limitation, they can only be compiled to WebAssembly instead of native codes, so don’t dream for `emacs` or `fish`!
+This article focus on compiling a small file or project written in C/C++ with a-Shell’s own tool chain. Due to Apple’s limitations, they can only be compiled to WebAssembly instead of native codes, so don’t dream for `emacs` or `fish`!
 
 ### Meet clang, clang++ and wasm
 
@@ -27,14 +27,14 @@ int main(){
 }
 ```
 
-To compile, we use `clang` and `clang++` respectively. We use `-o` to set the name of the target file, and they can end with `.wasm` or not.
+To compile, we use `clang` and `clang++` respectively. We use `-o` to set the name of the output file (they can end with `.wasm` or not).
 
 ```
 $ clang test.c -o testc
 $ clang++ test.cpp -o testcpp.wasm
 ```
 
-Then run the compiled files with `wasm`. You can either call `wasm` to run it or execute it directly like binary codes.
+Then run the compiled files with `wasm`. You can either call `wasm` to run it or execute it directly like binary code.
 
 ```
 $ ./testc
@@ -43,7 +43,7 @@ $ wasm testcpp.wasm
 Hello, world!
 ```
 
-You may receive a message `wasm: Error:` sometimes. Try to close all the open windows and retry.
+You may receive a message `wasm: Error:` sometimes. When you do, try to close all the open windows then retry.
 
 ### Meet make
 
@@ -55,7 +55,7 @@ $ make
 $ make install
 ```
 
-For the example above, `./configure` generates the makefile according to your platform, `make` compiles the project according to the makefile, and `make install` installs it to the computer. However, sometimes `./configure` really doesn’t know the difference of a-Shell and WebAssembly so that it may do the wrong work and mess it up.
+For the example above, `./configure` generates the makefile according to your platform, `make` compiles the project according to the makefile, and `make install` installs it to the computer. However, sometimes `./configure` really doesn’t know the difference between a-Shell and WebAssembly, so it may do the wrong work and mess it up.
 
 Now let’s see a simple project: `unrar`. It’s simple enough that there is no script like `configure` to generate makefiles. First of all get the whole source code, and here are parts of the short makefile:
 

@@ -2,7 +2,7 @@
 
 Of course not!
 
-As you can see, many parts are not finished yet! The doc is still on progress and anyone is welcomed to have everything completed, fix errors or share ideas. See [contribute-to-the-book.md](contribute-to-the-book.md "mention") for more information.
+As you can see, many parts are not finished yet! This doc is still in progress and everyone is welcomed to have everything completed, fix errors or share ideas. See [contribute-to-the-book.md](contribute-to-the-book.md "mention") for more information.
 
 ### Our current works
 
