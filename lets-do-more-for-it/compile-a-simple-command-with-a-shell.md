@@ -47,7 +47,7 @@ You may receive a message `wasm: Error:` sometimes. When you do, try to close al
 
 ### Meet make
 
-For big projects, it’ll be a difficult work to input commands to compile all files line by line. Usually, `make` is used to do it automatically. `make` seeks for the makefile of the project and do as it directs when it works. You may have known a famous way to compile and install a project from source codes:
+For big projects, it’ll be a difficult job to input commands to compile all files line by line. Usually, `make` is used to do it automatically. `make` seeks for the makefile of the project and do as it directs when it works. You may have known a famous way to compile and install a project from source codes:
 
 ```
 $ ./configure
