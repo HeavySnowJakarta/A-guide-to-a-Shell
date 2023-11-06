@@ -14,7 +14,7 @@ As `dash` is POSIX-compatible, standard shell scripts are able to be executed. B
 
 ### .profile and .bashrc
 
-`~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window start, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc. For example, add a alias to your `.profile`:
+`~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window starts, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc. For example, add a alias to your `.profile`:
 
 ```bash
 alias md=‘mkdir’
