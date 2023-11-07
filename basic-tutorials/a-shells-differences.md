@@ -36,7 +36,7 @@ Use `play` command to play audio/video files.
 
 <figure><img src="../.gitbook/assets/D61372EE-CB56-476C-921D-A720D67B4418.jpeg" alt=""><figcaption><p>An playing audio file</p></figcaption></figure>
 
-Although you can easily share a file from a-Shell by `open`, you can’t share a file to a-Shell directly. Fortunately, you can achieve that using shortcuts. As mentioned earlier, all files shared to a-Shell are saved at `~shortcuts/`. For another location, consider using a shortcut to execute a command automatically.
+Although you can easily share a file *from* a-Shell via `open`, you can’t share a file *to* a-Shell directly. Fortunately, you can achieve that using shortcuts. As mentioned earlier, all files shared to a-Shell are saved at `~shortcuts/`. For another location, consider using a shortcut to execute a command automatically.
 
 #### Access to the files
 
