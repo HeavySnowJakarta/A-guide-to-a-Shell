@@ -58,7 +58,7 @@ $ export PS1=‘\[\033[034m\]\w\[\033[0m\]\$’
 
 Now guess how to get a rainbow-style prompt like this. Nerd fonts will be needed for arrays.
 
-<figure><img src="../.gitbook/assets/34977EE6-3A93-4E5E-A2F4-108E57599302.jpeg" alt=""><figcaption><p>A rainblw-style prompt</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/34977EE6-3A93-4E5E-A2F4-108E57599302.jpeg" alt=""><figcaption><p>A rainbow-style prompt</p></figcaption></figure>
 
 Attention this feature only works for a-Shell’s default shell (the one when a-Shell starts) but not for `dash`. When you run `dash`, you can only get a series of strange codes.
 
