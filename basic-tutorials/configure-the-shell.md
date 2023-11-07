@@ -4,7 +4,7 @@ This article focus on configuring the shell of a-Shell. The default (and the onl
 
 ### Why dash?
 
-It’s a hard work to include a shell on a-Shell. Among the various shells we can choose, `dash` is a simpler and lighter one.
+It’s a difficult task to include a shell in a-Shell. Among the various shells we can choose, `dash` is a simpler and lighter one.
 
 Although `bash` is used more commonly, it can‘t be included in a-Shell, because it’s under GPL. `zsh` is much more complex, but it’s on the to-do list. If it can be included successfully, the user’s experience would be greatly improved.
 
