@@ -37,7 +37,7 @@ Address: 198.18.0.37
 A tool called `pkg` can be used to install some extra commands. You can use `pkg install` to get more commands:
 
 ```sh
-$ pkg install zips
+$ pkg install zip
 ```
 
 Use `pkg list` to list all packages already-installed and `pkg search <package name>` to search if a package is available. To see all available packages, use `pkg search`. To remove a package, use `pkg remove <package name>`.
