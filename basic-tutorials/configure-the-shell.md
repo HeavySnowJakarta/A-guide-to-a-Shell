@@ -36,9 +36,9 @@ Sometimes we want to know the current path or other useful information via the p
 * `\d`: the current date
 * `\u`: the username stored at `$USERNAME`, `mobile` by default
 * `\s`: the shell’s name
-* `\n`: the end of a line, used to start a new line
-* `\t`: the current time, going by hh:mm:ss and 24-hour format
-* `\T`: the current time, going by hh:mm:ss and 12-hour format
+* : the end of a line, used to start a new line
+* : the current time, going by hh:mm:ss and 24-hour format
+* : the current time, going by hh:mm:ss and 12-hour format
 * `\@`: the current time, going by hh:mm and 12-hour format
 * `\A`: the current time, going by hh:mm and 24-hour format
 * `\v`: the current version of a-Shell
@@ -55,6 +55,8 @@ You can use ANSI controlling characters to define colors or other styles. Here i
 ```
 $ export PS1=‘\[\033[034m\]\w\[\033[0m\]\$’
 ```
+
+Add the command to `.bashrc` so that it can be loaded every time a-Shell starts.
 
 Now guess how to get a rainbow-style prompt like this. Nerd fonts will be needed for arrays.
 

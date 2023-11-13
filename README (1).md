@@ -6,7 +6,7 @@ You may have already found `a-Shell` on the App Store. `a-Shell` is a terminal e
 
 #### Basic commands and net commands
 
-As is expected, basic commands like `ls`, `cd` and `cp` are available of course. Many important net commands have been provided as well.&#x20;
+As is expected, basic commands like `ls`, `cd` and `cp` are available of course. Many important net commands have been provided as well.
 
 ```sh
 $ ping google.com -c 4
@@ -49,7 +49,7 @@ om/holzschu/a-Shell-commands](https://github.com/holzschu/a-Shell-commands) woul
 $ export PKG_SERVER=https://github.com/holzschu/a-Shell-commands 
 ```
 
-If you can’t get or search any package, there may be something wrong with `$PKG_SERVER`. Try to unset it to switch to the default repository:
+If you can’t get or search for any package, there may be something wrong with `$PKG_SERVER`. Try to unset it to switch to the default repository:
 
 ```sh
 $ unsetenv PKG_SERVER
@@ -59,7 +59,7 @@ $ unsetenv PKG_SERVER
 
 So far three text editors are provided: `vim`, `pico` and `ed`.
 
-Vim users may be happy to see vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [configure-your-vim.md](basic-tutorials/configure-your-vim.md "mention") for details.
+Vim users may be happy to see Vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [configure-your-vim.md](basic-tutorials/configure-your-vim.md "mention") for details.
 
 <figure><img src=".gitbook/assets/89BA884C-9395-4E53-9284-97E69E3CE2A9.jpeg" alt=""><figcaption><p>Vim interface</p></figcaption></figure>
 
@@ -96,7 +96,7 @@ $
 
 #### Remote SSH/SFTP
 
-SSH connecting is avilable. Just use `ssh`, `scp` and `sftp` as you’ve got used. Use `ssh-keygen` to generate SSH keys. `mosh` and `sshd` are not supported yet.
+SSH connecting is available. Just use `ssh`, `scp` and `sftp` as you’ve got used to. Use `ssh-keygen` to generate SSH keys. `mosh` and `sshd` are not supported yet.
 
 #### Python 3
 
@@ -180,7 +180,7 @@ $ jsc test.js
 Hello, world!
 ```
 
-It will be a hard thing to have `node.js` included. Possibilities exist to make them run with `jsc` but so far nobody has tried. On the chapter _Let’s do more for it_ this problem will be talked about.
+It will be a hard thing to have `node.js` included. Possibilities exist to make them run with `jsc` but so far nobody has tried. In the chapter _Let’s do more for it_ this problem will be talked about.
 
 #### C/C++ and WebAssembly
 
