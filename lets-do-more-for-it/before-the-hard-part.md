@@ -13,6 +13,13 @@ This is one of the most important problems of this topic. All programs working o
 
 Consider do you want to compile your codes to native codes or WebAssembly codes, which is decided by whether the project is complex and whether it’ll be welcomed by the majority of the users.
 
+### The file system of a-Shell
+
+Another important problem. According to the limitations of Apple, most paths are not available for non-jailbroken devices. So a-Shell uses a different file structure. In short:
+
+* `~/Library/` just acts like `/usr`.
+* `~/Documents` just acts like `/home/your_account`, commonly known as `~` for a normal computer.
+
 ### What would be talked about at this chapter?
 
 This part is in progress and not finally determined.
@@ -25,4 +32,3 @@ This part is in progress and not finally determined.
 * The possibilities of Rust
 * Node.js? JSCompiler?
 * Some interesting ideas
-
