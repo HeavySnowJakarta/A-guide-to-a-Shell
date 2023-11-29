@@ -6,4 +6,20 @@ Due to Apple's safety policy, external binary codes outside of the app itself ar
 
 As the speed of JavaScript is slow, some people hope there can be a technology that can introduce low-level program languages to the web browser, thus WebAssembly is born. It seems to be a kind of new "programming language" but actually it's a kind of object code that can be executed on different architectures and systems, and it's well-known for its safety and efficiency.
 
-As some people have noticed WebAssembly's features, they guess it can be used to write cross-platform projects. Thus, there should be a runtime like Java to provide a way to run WebAssembly codes outside of the browser.
+As some people have noticed WebAssembly's features, they guess it can be used to write cross-platform projects. Thus, there should be a runtime like Java to provide a way to run WebAssembly codes outside of the browser, which is called `wasi` later. WASI itself can be ported to any platforms and it provides a set of APIs for wasm programs. In a word, when a program claims it supports WebAssembly, it may be designed for two cases: either browser environments, or a kind of cross-platform runtime called `wasi`. When a program works with `wasi`, it can certainly be ported to a-Shell.
+
+WASI built-in with a-Shell is specialized. standard `wasi-libc` only allows WebAssembly programs to read from the standard input and write to the standard output. More system calls like reading and writing files and getting directory contents have been added to a-Shell's WASI, but it still has many limits:
+
+* No process-associated clocks. If you try to compile a program that uses `getrusage()`, there will be an explicit warning telling you to use `-D_WASI_EMULATED_PROCESS_CLOCKS` and `-lwasi-emulated-process-clocks`.
+* No signal functions. Again, there will be a warning telling you to use: `-D_WASI_EMULATED_SIGNAL` and link with `-lwasi-emulated-signal`.
+* No mmap function. There will be a warning telling you to use: `-D_WASI_EMULATED_MMAN` and link with `-lwasi-emulated-mman`.
+
+There is also no `setjmp()/longjmp()`, no `fork()`, and no threads (and no ways to emulated them. There are threads in some versions of webAssembly, but they require a server, not something running locally).
+
+WASI supports threads experimentally via web workers. For web-based projects, web workers are enabled only when the server has set certain flags. For local side, we don't know how to enable it. Apple has disabled it for security reasons.
+
+The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it has been developed for years but its usage outside of the web browser is still greatly limited.
+
+### Cross compile WebAssembly projects with your computer
+
+You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.&#x20;

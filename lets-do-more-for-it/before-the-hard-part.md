@@ -20,6 +20,8 @@ Another important problem. According to the limitations of Apple, most paths are
 * `~/Library/` just acts like `/usr`.
 * `~/Documents` just acts like `/home/your_account`, commonly known as `~` for a normal computer.
 
+You may have noticed a directory `~/Library/usr/` also exists. It's for special needs of `clang`.
+
 ### What would be talked about at this chapter?
 
 This part is in progress and not finally determined.
