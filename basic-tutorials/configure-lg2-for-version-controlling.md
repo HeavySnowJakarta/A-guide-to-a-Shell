@@ -36,7 +36,7 @@ Now you can use either `git` or `lg2` to manage Git repositories.
 You may want a SSH key to link to GitHub or other Git repositories. Let’s generate an SSH key first.
 
 ```
-$ ssh-keygen -t ed25519 -c “<user name>”
+$ ssh-keygen -t ed25519 -c "<user name>"
 ```
 
 Some users prefer `rsa`. Attention sometimes RSA keys don’t work for GitHub or some other websites because of a confusing SHA-1 problem. If you meet the problem too, try `ed25519` or `ecdsa`. Choose a path and the name for your keys, set a password or not with the tutorial, and then upload your public key to the Git server. You can get a lot of useful information by searching it about how to upload it to GitHub or somewhere else. Now we’ll test it:
@@ -54,15 +54,15 @@ There are problems with this part!
 {% endhint %}
 
 ```
-$ lg2 config —-global user.name “<your name>”
-$ lg2 config —-global user.email “<your email>”
+$ lg2 config —-global user.name "<your name>"
+$ lg2 config —-global user.email "<your email>"
 ```
 
 To avoid being prompted for the key to use and your password each time, you can add
 
 ```
-$ lg2 config —-global user.identityFile "~/Documents/.ssh/<private key filename>”
-$ lg2 config —-global user.password “<your password>”
+$ lg2 config —-global user.identityFile "~/Documents/.ssh/<private key filename>"
+$ lg2 config —-global user.password "<your password>"
 ```
 
 If these commands don't work, you can manually create a global configuration file:
@@ -78,7 +78,8 @@ Then put
        name = <your name>
        email = <your email>
 ```
-in the body of the file. For more information on the configuration possibilities and required syntax, see the [Git Book](https://git-scm.com/docs/git-config#_configuration_file). If you put sensitive information in the file, such as SSH key passphrases, you should set file permissions appropriately to limit risks, using `chmod`.
+
+in the body of the file. For more information on the configuration possibilities and required syntax, see the [Git Book](https://git-scm.com/docs/git-config#\_configuration\_file). If you put sensitive information in the file, such as SSH key passphrases, you should set file permissions appropriately to limit risks, using `chmod`.
 
 ### Cloning and other operations
 

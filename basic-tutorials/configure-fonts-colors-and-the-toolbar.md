@@ -32,7 +32,7 @@ First you have to prepare your own console font manually. It’s recommended to 
 In this example, we’ll use `UbuntuMono Nerd Font Mono`. Go back to a-Shell and just run:
 
 ```
-$ config -n ‘UbuntuMono Nerd Font Mono’
+$ config -n 'UbuntuMono Nerd Font Mono'
 ```
 
 If you don’t know the name of your font, use `config -n` to open a font menu and choose one then.

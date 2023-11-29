@@ -18,6 +18,7 @@
 * [Before the hard part](lets-do-more-for-it/before-the-hard-part.md)
 * [Submit new packages](lets-do-more-for-it/submit-new-packages.md)
 * [Compile a simple command with a-Shell](lets-do-more-for-it/compile-a-simple-command-with-a-shell.md)
+* [WebAssembly for a-Shell](lets-do-more-for-it/webassembly-for-a-shell.md)
 
 ***
 

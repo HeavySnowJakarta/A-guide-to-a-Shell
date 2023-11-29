@@ -107,6 +107,11 @@ There are two assumptions here:
 * The executable file is available from GitHub Release. You either let `holzschu` to release it, or fork it to your own account and then release it there.
 * The script will be availabe ONCE it's merged into the original repository as the script is trying to get the files from it. It won't work if the files can not be found from the original repository.
 
+Now let's consider `cow/*`. It can be packed into a `tar` archive and be released. Now our script looks like this:
+
+```
+```
+
 The uninstall script will be much more simple——it just deletes the files related to the program.
 
 ```bash

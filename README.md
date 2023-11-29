@@ -10,10 +10,6 @@ This work is published under CC BY-SA 4.0 license. Feel free to share it around.
 
 If you know little about `a-Shell`, you can start by reading [README (1).md](<README (1).md> "mention").
 
-{% hint style="danger" %}
-The command line code blocks of this guide are NOT designed to copy and run in the terminal directly. Be cautious before you run any commands showed in this guide or you might meet errors. Input them manually instead.
-{% endhint %}
-
 ### Official links of a-Shell
 
 **GitHub repo:** [**https://github.com/holzschu/a-shell**](https://github.com/holzschu/a-shell)

@@ -36,6 +36,8 @@ Use `play` command to play audio/video files.
 
 <figure><img src="../.gitbook/assets/D61372EE-CB56-476C-921D-A720D67B4418.jpeg" alt=""><figcaption><p>An playing audio file</p></figcaption></figure>
 
+Use `internalbrowser` like `internalbrowser https://google.com` to visit web pages within a-Shell, and swipe left or right to jump between pages. When you swipe right on the first page you view, you will go back to the console. This function may be helpful for front-end projects in the future.
+
 Although you can easily share a file _from_ a-Shell via `open`, you can’t share a file _to_ a-Shell directly. Fortunately, you can achieve that using shortcuts. As mentioned earlier, all files shared to a-Shell are saved at `~shortcuts/`. For another location, consider using a shortcut to execute a command automatically.
 
 #### Access to the files

@@ -17,7 +17,7 @@ As `dash` is POSIX-compatible, standard shell scripts are able to be executed. B
 `~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window starts, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc. For example, add a alias to your `.profile`:
 
 ```bash
-alias md=‘mkdir’
+alias md='mkdir'
 ```
 
 ### Define the prompt
@@ -27,7 +27,7 @@ Zsh lovers may be addicted to the colorful prompts of the terminal. The good new
 What the prompt looks like is defined by the variable `$PS1`. For example, you can set it to a character you like:
 
 ```bash
-$ export PS1=‘>’
+$ export PS1='>'
 >
 ```
 
@@ -36,9 +36,9 @@ Sometimes we want to know the current path or other useful information via the p
 * `\d`: the current date
 * `\u`: the username stored at `$USERNAME`, `mobile` by default
 * `\s`: the shell’s name
-* : the end of a line, used to start a new line
-* : the current time, going by hh:mm:ss and 24-hour format
-* : the current time, going by hh:mm:ss and 12-hour format
+* `\n`: the end of a line, used to start a new line
+* `\t`: the current time, going by hh:mm:ss and 24-hour format
+* `\T`: the current time, going by hh:mm:ss and 12-hour format
 * `\@`: the current time, going by hh:mm and 12-hour format
 * `\A`: the current time, going by hh:mm and 24-hour format
 * `\v`: the current version of a-Shell
@@ -53,7 +53,7 @@ Sometimes we want to know the current path or other useful information via the p
 You can use ANSI controlling characters to define colors or other styles. Here is an example:
 
 ```
-$ export PS1=‘\[\033[034m\]\w\[\033[0m\]\$’
+$ export PS1='\[\033[034m\]\w\[\033[0m\]\$'
 ```
 
 Add the command to `.bashrc` so that it can be loaded every time a-Shell starts.
