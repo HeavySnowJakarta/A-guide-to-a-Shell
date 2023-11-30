@@ -10,6 +10,10 @@ This work is published under CC BY-SA 4.0 license. Feel free to share it around.
 
 If you know little about `a-Shell`, you can start by reading [README (1).md](<README (1).md> "mention").
 
+{% hint style="warning" %}
+Some parts of this doc are NOT stable. As a new-born document I chose to expose all unstable parts to the readers since they have been under development rather than release them after strict tests so that you can see newest changes at all times. Each unstable part will be marked with a warning hint.
+{% endhint %}
+
 ### Official links of a-Shell
 
 **GitHub repo:** [**https://github.com/holzschu/a-shell**](https://github.com/holzschu/a-shell)

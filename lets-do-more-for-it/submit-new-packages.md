@@ -43,12 +43,12 @@ mandocdb ~/Library/man
 
 The uninstall script just clears everything about the package: the binary file, and the man page. For a more comlex project, remember to remove any app data by your package.
 
-Now we have clarified: an install script is needed for `pkg install` to execute while an uninstall script is needed as well, except it is for `pkg uninstall`. Usually the man page is also needed although it isn't required because it isn't always necissary. The install script is stored at the repository and it indicates where the other parts of the package are stored at.
+Now we have clarified: an install script is needed for `pkg install` to execute while an uninstall script is needed as well, except it is for `pkg uninstall`. Usually the man page is also needed although it isn't required because it isn't always necessary. The install script is stored at the repository and it indicates where the other parts of the package are stored at.
 
 ### An example
 
-{% hint style="info" %}
-This part is still on progress. A problem has to be clarified: How to release the directory `cows`?
+{% hint style="warning" %}
+This part is unstable. You may meet problems running Perl scripts and submitting directories.
 {% endhint %}
 
 `cowsay` is an old and famous project written in Perl. To have it installed, we may clone the GitHub mirror repository first:

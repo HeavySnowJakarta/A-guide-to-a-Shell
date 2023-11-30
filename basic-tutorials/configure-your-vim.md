@@ -33,6 +33,6 @@ You can also write the command to `.vimrc` to load it automatically and suitably
 ### Manage packages automatically
 
 {% hint style="info" %}
-This part would be written when `pack` is released.
+This part is planned in the future.
 {% endhint %}
 
