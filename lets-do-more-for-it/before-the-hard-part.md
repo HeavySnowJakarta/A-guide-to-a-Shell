@@ -1,5 +1,9 @@
 # Before the hard part
 
+> I bet if I blew the conch this minute, they'd come running. Then we'd be, you know, very solemn, and someone would say we ought to build a jet, or a submarine, or a TV set. When the meeting was over they'd work for five minutes, then wander off or go hunting.
+>
+> \--_Lord of the Flies_
+
 Everyone reading this chapter of the guide book must be unsatisfied by the functions a-Shell already has, and at this chapter we will talk about various possibilities of what this App can do.
 
 Attention that this road is filled with big challenges. Sometimes you have to learn a number of concepts or search on the Internet again and again just to deal with a confusing error. If you are ready now, start your hacking trip!
