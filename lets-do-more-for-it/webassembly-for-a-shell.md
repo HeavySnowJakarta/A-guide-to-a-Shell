@@ -24,6 +24,29 @@ WASI supports threads experimentally via web workers. For web-based projects, we
 
 The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it has been developed for years but its usage outside of the web browser is still greatly limited.
 
-### Cross compile WebAssembly projects with your computer
+### Cross compile WebAssembly projects with `wasi-sdk` on a-Shell for your computer
 
-You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.&#x20;
+You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk`'s outputs also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.&#x20;
+
+Thè following parts of this chapter focus on running `wasi-sdk` built-in with a-Shell _on the computer_.
+
+#### Build Wasm SDK for computer
+
+`wasi-sdk` for a-Shell provides native macOS binaries at [the GitHub repository](https://github.com/holzschu/wasi-sdk/releases). For other systems, you have to compile yourself. Generally, you have to prepare (according to the guide of `wasi-sdk` _upstream_):
+
++ `cmake`
++ `ninja`
++ `clang`
++ `python3`
+
+For Windows, you may want to get the dependencies via the MinGW repository (without Cygwin or MSYS2 may work but I've never tried). Clone the repository **with submodules** on anywhere you want:
+
+```plain
+git clone --recurse-submodules https://github.com/holzschu/wasi-sdk.git
+```
+
+### Cross compile WebAssembly projects with common LLVM+Clang on your computer
+
+Even though you don't have a specified `wasi-sdk` on the computer, it's possible to generate WASI binary files with a common LLVM+Clang toolchain (or any other available compilers). Refer to the guide of `wasi-sdk` upstream:
+
+> One could also use a standard Clang installation, build a sysroot from the sources mentioned above, and compile with `--target=wasm32-wasi --sysroot=/path/to/sysroot`. In this scenario, one would also need the `libclang_rt.builtins-wasm32.a` objects available separately in the [release](https://github.com/WebAssembly/wasi-sdk/releases) downloads which must be extracted into `$CLANG_INSTALL_DIR/$CLANG_VERSION/lib/wasi/`.
