@@ -24,6 +24,10 @@ WASI supports threads experimentally via web workers. For web-based projects, we
 
 The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it has been developed for years but its usage outside of the web browser is still greatly limited.
 
+### WebAssembly with threads
+
+Ref: https://web.dev/articles/coop-coep
+
 ### Cross compile WebAssembly projects with your computer
 
 You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.
