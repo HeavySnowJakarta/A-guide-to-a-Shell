@@ -18,7 +18,7 @@ WASI built-in with a-Shell is specialized. standard `wasi-libc` only allows WebA
 * No signal functions. Again, there will be a warning telling you to use: `-D_WASI_EMULATED_SIGNAL` and link with `-lwasi-emulated-signal`.
 * No mmap function. There will be a warning telling you to use: `-D_WASI_EMULATED_MMAN` and link with `-lwasi-emulated-mman`.
 
-There is also no `setjmp()/longjmp()`, no `fork()`, and no threads (and no ways to emulated them. There are threads in some versions of webAssembly, but they require a server, not something running locally).
+There is also no `setjmp()/longjmp()`, no `fork()`, and no threads (and no ways to emulate them. There are threads in some versions of webAssembly, but they require a server, not something running locally).
 
 WASI supports threads experimentally via web workers. For web-based projects, web workers are enabled only when the server has set certain flags. For local side, we don't know how to enable it. Apple has disabled it for security reasons.
 
@@ -26,4 +26,6 @@ The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it 
 
 ### Cross compile WebAssembly projects with your computer
 
-You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.&#x20;
+You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.
+
+WASI API still continues updating (although VERY SLOW) so new functions may be added in the future in time.

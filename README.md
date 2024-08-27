@@ -1,6 +1,6 @@
 # About the book
 
-`a-Shell` is a terminal emulator for iOS/iPadOS, where you can run Unix commands.
+`a-Shell` is not only a terminal emulator for iOS/iPadOS, but also an environment with a set of useful libraries, where you can run basic Unix commands and other tricky tools.
 
 This document is a tutorial for newcomers to know how to do various things on this app, from editing text files to compiling big projects.
 
