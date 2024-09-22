@@ -4,11 +4,32 @@ Sometimes you want to release your projects to the `pkg` repository so that ever
 
 ### The structure of a package
 
-The offical repository is stored at [https://github.com/holzschu/a-Shell-commands](https://github.com/holzschu/a-Shell-commands). To prepare a package, three parts are needed: the install script, the man page and the uninstall script. Let’s see an example `expand`.
+The offical repository is stored at [https://github.com/holzschu/a-Shell-commands](https://github.com/holzschu/a-Shell-commands). See the repository for it's file structure:
+
+```plain
+.
+├──man
+├──packages
+├──uninstall
+├──list
+├──pkg
+└──README.md
+```
+
+Among them,
+
++ `man/man[0-9]`: The man files, stored at the corresponding directories.
++ `packages`: The install scripts.
++ `uninstall`: The uninstall scripts.
++ `list`: A list of available packages, one for per line.
++ `pkg`: The script to manage the pankages.
+
+
+Therefore, to prepare a package, three parts are needed: the install script, the man page and the uninstall script. Let’s see an example `expand`.
 
 Here is its install script:
 
-```bash
+```sh
 #! /bin/sh
 # Default install file for packages:
 
@@ -27,7 +48,7 @@ curl -L https://raw.githubusercontent.com/holzschu/a-Shell-commands/master/unins
 
 The install script downloads the binary file (scripts sometimes) to `~/Documents/bin/` or `~/Library/bin/` that is stored at `$PATH`, then gets the man page, refreshes the man database,and finally downloads the uninstall script. The binary file(s) can be stored at a repository (anywhere in fact) and for a single command it can be parsed with `curl`. Here’s it’s uninstall script:
 
-```bash
+```sh
 #! /bin/sh
 
 # Default uninstall file for packages:
@@ -47,70 +68,64 @@ Now we have clarified: an install script is needed for `pkg install` to execute 
 
 ### An example
 
-{% hint style="warning" %}
-This part is unstable. You may meet problems running Perl scripts and submitting directories.
-{% endhint %}
+`checkbashisms` is a part of [`devscripts`](https://salsa.debian.org/debian/devscripts), which can check if the scripts starting with `#!/usr/bin/sh` are compatible with Dash (which had better be just POSIX-compatible). To add it as a a-Shell package, get the shell source file from the source site first. Here we'll use the tag `v2.24.1` as example:
 
-`cowsay` is an old and famous project written in Perl. To have it installed, we may clone the GitHub mirror repository first:
+```perl
+#!/usr/bin/perl
 
-```
-$ lg2 clone https://github.com/schacon/cowsay
-```
+# This script is essentially copied from /usr/share/lintian/checks/scripts,
+# which is:
+#   Copyright (C) 1998 Richard Braakman
+#   Copyright (C) 2002 Josip Rodin
+# This version is
+#   Copyright (C) 2003 Julian Gilbey
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# ...
 
-We can see there is an `install.sh` on the repository. Actually it does not work with a-Shell and `dash` while it’s not essential. We’ll rewrite the installation script for it.
-
-`install.sh` searches for if Perl exists on the computer which is not necessary for a-Shell so this part will not be used. According to the file `MANIFEST` of the repository, the project has the following files:
-
-```
-ChangeLog		Changes to recent versions.
-INSTALL			Instructions for installing cowsay.
-LICENSE			The license for use and redistribution of cowsay.
-MANIFEST		This file.
-README			Read this first.  Really.
-Wrap.pm.diff		Diff for Text/Wrap.pm.
-cows/*			Support files used by cowsay.
-cowsay			Main cowsay executable.
-cowsay.1		Main cowsay manual page.
-install.sh		cowsay installation script.
-pgp_public_key.txt	Verify the signature file with this key.
+use strict;
+use warnings;
+use Getopt::Long qw(:config bundling permute no_getopt_compat);
+use File::Temp   qw/tempfile/;
+...
 ```
 
-Among them, three files are important:
+That file is all we need. As a Perl script, it just runs with a-Shell and no compiling is needed. Import the file to a-Shell and we'll see it working, so it's the time to commit it to the `pkg` repository. All we have to do are:
 
-* `cowsay`, a script written in Perl, the most important executable file
-* `cows/*`, a directory storing the source files used by `cowsay`
-* `cowsay.1`, the man page (`man1`) of `cowsay`
++ Fork [a-Shell-commands](https://github.com/holzschu/a-Shell-commands) (REMEMBER TO CREATE A NEW BRANCH FOR YOUR PACKAGE!).
++ Release the executable file with GitHub Release, where the install script will download the file from that link.
++ Write your scripts to install and uninstall, and put the man page file there.
++ Add the info to `list` (and perhaps `README.md`).
++ Open a PR as the scripts will work as long as the changes are merged.
 
-The file ending with a single number is the man page here. We just put it into the corresponding `man` directory according to its number. For example, `*.1` files can be stored at the directory `man/man1`.
+From the Debian's repository we can get the man file `checkbashisms.1`, which ends with a single number `.1`. Release it together with the Perl script above. The man file will be put into the corresponding `man` directory according to its number, so our man page here will be stored at the directory `man/man1`.
 
-These files will be copied to where they should be on the computer, `/usr/local/bin` for `cowsay` and `/usr/local/share` for `cows/*`. as what `install.sh` tells us. According to the unique file system of a-Shell, `/usr` will be replaced into `~/Library`. For `cowsay.1`, we'll copy it to `~/Library/man/man1/$packagename.1` just like other packages. Thus, our `install.sh` may seems like this (not considering `cows/*`):
+Now let's write the script to install (after creating the release, [checkbashisms's release](https://github.com/HeavySnowJakarta/a-Shell-commands/releases/tag/checkbashisms-v2.24.1) as example here).
 
 ```sh
 #!/bin/sh
-# install script for cowsay
+# install script for checkbashisms
 
 packagename=${0##*/}
 
 # download command:
-curl -L <somewhere> -o ~/Documents/bin/$packagename --create-dirs --silent
-chmod +x ~/Document/bin/$packagename
+curl -L https://github.com/HeavySnowJakarta/a-Shell-commands/releases/download/checkbashisms-v2.24.1/checkbashisms -o ~/Documents/bin/$packagename --create-dirs --silent
+chmod +x ~/Documents/bin/$packagename
 # download man page
 curl -L https://raw.githubusercontent.com/holzschu/a-Shell-commands/master/man/man1/$packagename.1 -o ~/Library/man/man1/$packagename.1 --create-dirs --silent
 # refresh man database
 mandocdb ~/Library/man
-# download uninstall information
+# download uninstall information:
 curl -L https://raw.githubusercontent.com/holzschu/a-Shell-commands/master/uninstall/$packagename -o ~/Documents/.pkg/$packagename --create-dirs --silent
 ```
 
 There are two assumptions here:
 
-* The executable file is available from GitHub Release. You either let `holzschu` to release it, or fork it to your own account and then release it there.
+* The executable file is available from GitHub Release. You either let `holzschu` to release it, or fork it to your own account and then release it there (we choose the latter here).
 * The script will be availabe ONCE it's merged into the original repository as the script is trying to get the files from it. It won't work if the files can not be found from the original repository.
-
-Now let's consider `cow/*`. It can be packed into a `tar` archive and be released. Now our script looks like this:
-
-```
-```
 
 The uninstall script will be much more simple——it just deletes the files related to the program.
 
@@ -122,8 +137,6 @@ packagename=${0##*/}
 
 # remove command
 rm ~/Documents/bin/$packagename
-# remove "cows"
-rm -r ~/Library/local/share/cows
 # remove man page
 rm ~/Library/man/man1/$packagename.1
 # refresh man database
@@ -137,29 +150,35 @@ a-shell-commands
 ├─man
 │ ├─man1
 │ │ ├─others
-│ │ └─cowsay.1 # the man page
+│ │ └─checkbashisms.1 # the man page
 │ └─man6
 ├─packages
 │ ├─others
-│ └─cowsay # the install script
+│ └─checkbashisms # the install script
 ├─uninstall
 │ ├─others
-│ └─cowsay # the uninstall script
+│ └─checkbashisms # the uninstall script
 ├─list
 ├─pkg
 └─README.md
 ```
 
-Then add the word `cowsay` into the file `list`:
+Then add the word `checkbashisms` into the file `list`:
 
-```
+```diff
 ...
-column
-comm
-cowsay
-csplit
-cut
+base64
+cal
++checkbashisms
+col
+colrm
 ...
 ```
 
-Release the excutable file `cowsay` and the directory `cows`, commit your changes, synchronize it to the remote server, and open a Pull Request finally. That's all you need to do to submit a new package.
+Also the file `README.md` (as it's under GPL):
+
+```diff
++[checkbashisms](https://salsa.debian.org/debian/devscripts)
+```
+
+Then open a PR. That's all you have to do.
