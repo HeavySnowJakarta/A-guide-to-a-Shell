@@ -42,7 +42,7 @@ Although you can easily share a file _from_ a-Shell via `open`, you can’t shar
 
 #### Access to the files
 
-With `pickFolder` command, a-Shell can get access to another location on your iPhone/iPad, iCloud for example.
+<!-- TODO: `pickFolder` -->
 
 You can also read/write `~/Documents/` folder with Files. Switch to “My iPhone”/“My iPad”, and you’ll see the directory “a-Shell”. Attention files outside of `~/Documents/` can not be read.
 
