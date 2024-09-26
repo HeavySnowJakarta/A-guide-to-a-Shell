@@ -12,6 +12,15 @@ Although `bash` is used more commonly, it can‘t be included in a-Shell, becaus
 
 As `dash` is POSIX-compatible, standard shell scripts are able to be executed. But one thing should be noticed: a number of scripts relies on `bash` actually. The first lines of some scripts is not `/usr/bin/env sh` but `/usr/bin/env bash`, making it not work, even including original `neofetch`. You can try to change `bash` to `dash` or `sh`, but all scripts using the features of `bash` won’t work anyway. In many cases you have to rewrite the script to avoid that. This may be improved if `zsh` can be added in the future.
 
+A Perl script `checkbashisms` is available to check if your script is compatible with a-Shell. First ensure your script starts like `#!/usr/bin/sh` (which means runs with most POSIX-compatible shells), and then use checkbashisms to check if non-compatible grammars are used:
+
+```sh
+# If you have not installed it before, do it first.
+pkg install checkbashisms
+# Then check it.
+checkbashisms [your_script]
+```
+
 ### .profile and .bashrc
 
 `~/Documents/.profile` and `~/Documents/.bashrc` are provided to let you define what to do when the shell starts. When a new a-Shell window starts, both `~/Documents/.profile` and `~/Documents/.bashrc` are loaded, and when `dash` starts, only `~/Documents/.profile` is loaded. That’s the difference between them. You can add many things to the two scripts: environment variables, alias, the prompt, etc. For example, add a alias to your `.profile`:
