@@ -5,7 +5,7 @@
 
 ## Basic tutorials
 
-* [A guide for beginners](<README (1).md>)
+* [A guide for beginners](<basic-tutorials/a-guide-for-beginners.md>)
 * [A-Shell’s differences](basic-tutorials/a-shells-differences.md)
 * [Configure fonts, colors and the toolbar](basic-tutorials/configure-fonts-colors-and-the-toolbar.md)
 * [Configure the Shell](basic-tutorials/configure-the-shell.md)

@@ -40,6 +40,8 @@ Use `internalbrowser` like `internalbrowser https://google.com` to visit web pag
 
 Although you can easily share a file _from_ a-Shell via `open`, you can’t share a file _to_ a-Shell directly. Fortunately, you can achieve that using shortcuts. As mentioned earlier, all files shared to a-Shell are saved at `~shortcuts/`. For another location, consider using a shortcut to execute a command automatically.
 
+Use `open tel://<phone number>` to make a phone call with a-Shell, and use `open sms://<phone number>&body=<msg content>` to send a SMS message. Don't use the functions to spam others.
+
 #### Access to the files
 
 <!-- TODO: `pickFolder` -->

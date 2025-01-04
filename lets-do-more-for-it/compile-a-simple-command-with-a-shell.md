@@ -34,12 +34,14 @@ $ clang test.c -o testc
 $ clang++ test.cpp -o testcpp.wasm
 ```
 
-Then run the compiled files with `wasm`. You can either call `wasm` to run it or execute it directly like binary code.
+Then run the compiled files with `wasm`. You can either call `wasm` to run it or execute it directly like binary code. Also you may want to try `wasm3`.
 
 ```
 $ ./testc
 Hello, world!
 $ wasm testcpp.wasm
+Hello, world!
+$ wasm3 testcpp.wasm
 Hello, world!
 ```
 

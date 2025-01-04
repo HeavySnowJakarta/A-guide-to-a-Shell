@@ -29,3 +29,15 @@ The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it 
 You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.
 
 WASI API still continues updating (although VERY SLOW) so new functions may be added in the future in time.
+
+### `wasm3` with a-Shell
+
+There is also a command `wasm3` shipped with a-Shell. `wasm3` may behave better than `wasm` in some ways but it's more limited in memory allocation. Try it out just replacing `wasm` with `wasm3`.
+
+```
+$ wasm3 your_program.wasm
+```
+
+### Any idea of Wasmer and Wasix?
+
+We are currently working at them.
