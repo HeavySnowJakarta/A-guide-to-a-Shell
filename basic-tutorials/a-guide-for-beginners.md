@@ -59,7 +59,7 @@ $ unsetenv PKG_SERVER
 
 So far three text editors are provided: `vim`, `pico` and `ed`.
 
-Vim users may be happy to see Vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [configure-your-vim.md](basic-tutorials/configure-your-vim.md "mention") for details.
+Vim users may be happy to see Vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [configure-your-vim.md](configure-your-vim.md "mention") for details.
 
 <figure><img src=".gitbook/assets/89BA884C-9395-4E53-9284-97E69E3CE2A9.jpeg" alt=""><figcaption><p>Vim interface</p></figcaption></figure>
 
@@ -70,7 +70,7 @@ If you are not used to Vim and looking for a simpler text editor, `pico` will su
 A toy, `ed`, is also included. `ed` is a line editor, which allows one to input editing commands line by line. For the example below, `r`, `,p`, `1`, `2`, `3`, `4` and `q` are commands inside, and others are the outputs by `ed`.
 
 ```
-$ ed
+$ ed
 r test.cpp
 131
 ,p
@@ -98,7 +98,7 @@ There are also Web based editors available: Ace, CodeMirror and Monaco. Use `pkg
 
 #### Running codes
 
-See [Running codes](./running-codes.md) for tips on running Python, Lua and Perl with a-Shell.
+See [Running codes](running-codes.md) for tips on running Python, Lua and Perl with a-Shell.
 
 #### Remote SSH/SFTP
 
