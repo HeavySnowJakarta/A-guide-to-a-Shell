@@ -60,4 +60,4 @@ jsc.system(command: string): Result
 internalbrowser https://google.com
 ```
 
-Swipe from left to the right to go back. When there's no web pages back, it'll lead you to the precious terminal.
+You shall input a valid complete URL or file name. A toolbar is provided to help you navigate.
