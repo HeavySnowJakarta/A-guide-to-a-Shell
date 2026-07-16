@@ -75,7 +75,7 @@ ZIG_LIBC=../wasi-libc/wasi-libc.txt zig cc --target=wasm32-wasi -fno-sanitize=un
 
 Copy `figlet.wasm` into your a-Shell and don't forget to bring a font file with you.
 
-<figure><img src="../.gitbook/assets/figlet.jpeg" alt=""><figcaption><p>figlet in a-Shell</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/figlet.jpeg" alt="Screenshot of figlet output in a-Shell"><figcaption><p>figlet in a-Shell</p></figcaption></figure>
 
 ### `wasm3` with a-Shell
 
