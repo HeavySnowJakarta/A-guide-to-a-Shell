@@ -26,15 +26,15 @@ The ecosystem of WebAssembly is still embarrassed. As a new-born technology, it 
 
 ### Cross compile WebAssembly projects with your computer
 
-You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized `wasi-sdk`: [https://github.com/holzschu/wasi-sdk](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [https://github.com/WebAssembly/wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.
+You can compile projects to WebAssembly not only with a-Shell's own tool chain, but also with a-Shell's specialized [`wasi-sdk`](https://github.com/holzschu/wasi-sdk), where extra functions like reading or writing files are provided. What's more, normal `wasi-sdk` also works with a-Shell theoretically. See also [the upstream wasi-sdk](https://github.com/WebAssembly/wasi-sdk) for more technical details.
 
 WASI API still continues updating (although VERY SLOW) so new functions may be added in the future in time.
 
 ### Cross compile WebAssembly with Zig
 
-Alternatively, you can use the Zig toolchain for building C applications for a-Shell. It's small (around 50 MB on Linux and macOS, 100 MB on Windows), and contains (almost) everything you need from the start: [https://ziglang.org/download/](https://ziglang.org/download/). All commands tested with Zig 0.16.0.
+Alternatively, you can use the Zig toolchain for building C applications for a-Shell. It's small (around 50 MB on Linux and macOS, 100 MB on Windows), and contains (almost) everything you need [from the start](https://ziglang.org/download/). All commands tested with Zig 0.16.0.
 
-For example, let's build the `par` application - [https://bitbucket.org/amc-nicemice/par/](https://bitbucket.org/amc-nicemice/par/), a little text formatter similar to `fmt`. Cross compiling it to a-Shell is as easy as:
+For example, let's build the [`par` application](https://bitbucket.org/amc-nicemice/par/), a little text formatter similar to `fmt`. Cross compiling it to a-Shell is as easy as:
 
 ```sh
 zig cc --target=wasm32-wasi -fno-sanitize=undefined -o par.wasm *.c
@@ -44,7 +44,7 @@ In this command we use `zig cc`, a drop-in C compiler bundled with Zig. We set t
 
 #### Using wasi-libc with Zig
 
-If we try to use the same approach for a different application, for example - `figlet` [https://github.com/cmatsuoka/figlet](https://github.com/cmatsuoka/figlet), we run into the limitations of the standard `wasi-libc`.
+If we try to use the same approach for a different application, for example [`figlet`](https://github.com/cmatsuoka/figlet), we run into the limitations of the standard `wasi-libc`.
 
 ```console
 $ zig cc --target=wasm32-wasi -fno-sanitize=undefined -Dunix -o figlet.wasm figlet.c zipio.c crc.c inflate.c
@@ -52,9 +52,9 @@ $ zig cc --target=wasm32-wasi -fno-sanitize=undefined -Dunix -o figlet.wasm figl
 wasm-ld: error: undefined symbol: tmpfile
 ```
 
-Notice that we don't use all C files for the build, because we don't need them, and set `-Dunix` because `figlet` needs this definition to choose the right includes. However, we still have a problem - there is no `tmpfile` function in libc for wasm. But we have it in a-Shell's specialized `wasi-libc`: [https://github.com/holzschu/wasi-libc](https://github.com/holzschu/wasi-libc).
+Notice that we don't use all C files for the build, because we don't need them, and set `-Dunix` because `figlet` needs this definition to choose the right includes. However, we still have a problem - there is no `tmpfile` function in libc for wasm. But we have it in [a-Shell's specialized `wasi-libc`](https://github.com/holzschu/wasi-libc).
 
-After you build it, you need to describe a new C library for Zig. Use `zig libc > wasi-libc.txt` to get a template with comments. In this file you need to set paths to the `wasi-libc` you built like this (I stripped all comments for clarity):
+After you build it, you need to describe a new C library for Zig. Use `zig libc > wasi-libc.txt` to get a template with comments. In this file you need to set paths to the `wasi-libc` you built like this (all comments have been stripped for clarity):
 
 ```ini
 include_dir=/path/to/wasi-libc/sysroot/include/wasm32-wasip1
