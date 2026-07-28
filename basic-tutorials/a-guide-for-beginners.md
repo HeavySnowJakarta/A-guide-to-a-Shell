@@ -30,7 +30,7 @@ Address: 198.18.0.37
 
 `man` command is also provided, so you can read the manuals of basic commands easily.
 
-<figure><img src=".gitbook/assets/68F0411E-EB70-4EEA-8E82-3119770F7787.jpeg" alt=""><figcaption><p>Manual of make</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/68F0411E-EB70-4EEA-8E82-3119770F7787.jpeg" alt=""><figcaption><p>Manual of make</p></figcaption></figure>
 
 #### Get more packages
 
@@ -46,7 +46,7 @@ The variable `$PKG_SERVER` defines the address to get packages. If the variable 
 om/holzschu/a-Shell-commands](https://github.com/holzschu/a-Shell-commands) would be used. You can set the repository you use by setting the variable:
 
 ```sh
-$ export PKG_SERVER=https://github.com/holzschu/a-Shell-commands 
+$ export PKG_SERVER=https://github.com/holzschu/a-Shell-commands
 ```
 
 If you can’t get or search for any package, there may be something wrong with `$PKG_SERVER`. Try to unset it to switch to the default repository:
@@ -59,13 +59,13 @@ $ unsetenv PKG_SERVER
 
 So far three text editors are provided: `vim`, `pico` and `ed`.
 
-Vim users may be happy to see Vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [configure-your-vim.md](configure-your-vim.md "mention") for details.
+Vim users may be happy to see Vim plugins just work, but plugin managers like `vim-plug` have many problems. Therefore, it’s suggested to use Vim 8’s built-in package manager. See [Configure your vim](./configure-your-vim.md "mention") for details.
 
-<figure><img src=".gitbook/assets/89BA884C-9395-4E53-9284-97E69E3CE2A9.jpeg" alt=""><figcaption><p>Vim interface</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/89BA884C-9395-4E53-9284-97E69E3CE2A9.jpeg" alt=""><figcaption><p>Vim interface</p></figcaption></figure>
 
 If you are not used to Vim and looking for a simpler text editor, `pico` will suit your needs. GNU Nano under GPL can’t be included in a-Shell due to FSF’s policy, so `pico` is included to provide a similar experience.
 
-<figure><img src=".gitbook/assets/D884DB64-276A-46D6-8ED6-789FBD167C1C.jpeg" alt=""><figcaption><p>Pico interface</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/D884DB64-276A-46D6-8ED6-789FBD167C1C.jpeg" alt=""><figcaption><p>Pico interface</p></figcaption></figure>
 
 A toy, `ed`, is also included. `ed` is a line editor, which allows one to input editing commands line by line. For the example below, `r`, `,p`, `1`, `2`, `3`, `4` and `q` are commands inside, and others are the outputs by `ed`.
 
@@ -98,7 +98,7 @@ There are also Web based editors available: Ace, CodeMirror and Monaco. Use `pkg
 
 #### Running codes
 
-See [Running codes](running-codes.md) for tips on running Python, Lua and Perl with a-Shell.
+See [Running codes](./running-codes.md) for tips on running Python, Lua and Perl with a-Shell.
 
 #### Remote SSH/SFTP
 
